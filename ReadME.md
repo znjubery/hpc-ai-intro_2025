@@ -1,4 +1,5 @@
-```markdown
+
+
 # Introduction to Machine Learning and Artificial Intelligence with High Performance Computing
 
 ## Workshop Overview
@@ -23,27 +24,20 @@ Access the provided links for the **Random Forest** and **CNN with CIFAR-10** no
 
 ### Extract Libraries and Versions
 Upload the notebook to ChatGPT with the following prompt to extract library dependencies:
-```
-
 Please extract the list of libraries imported in the attached Jupyter Notebook. Additionally, provide a Jupyter Notebook cell command to display the version of each imported library along with the Python version in a professional format.
 
-```
-Append the generated list to the notebook for future reference. Use an additional prompt to convert the extracted libraries into a pip install format:
-```
 
-Provide this in pip install format.
+Append the generated script to the notebook to get the required libraries and versions.
 
-```
+Use an additional prompt to convert the list of libraries into a pip install format:
+
+Provide this in pip install format. then paste the list.
+
 
 > **Note:** For some libraries, such as PyTorch, refer to the [PyTorch installation guide](https://pytorch.org/get-started/locally/) to ensure compatibility with your environment.
 
 ---
 
-### Transfer Notebooks to the HPC
-Transfer the downloaded `.ipynb` files to your HPC home directory using a secure copy tool (e.g., `scp`):
-```bash
-scp <notebook_name>.ipynb <username>@<hpc_address>:/home/<username>/
-```
 
 ---
 
@@ -72,12 +66,13 @@ scp <notebook_name>.ipynb <username>@<hpc_address>:/home/<username>/
 - Create a new Conda environment:
 
   ```bash
-  conda create --prefix /home/<username>/<environment_name> python=3.10.12
+  conda create --prefix /home/<username>/<environment_name> python=3.xx
   ```
 
   OR
+
   ```bash
-  conda create -n <environment_name> python=3.10.12
+  conda create -n <environment_name> python=3.xx
   ```
 - Activate the environment:
 
@@ -144,7 +139,7 @@ python <script_name>.py
   ```
 - Submit the job:
   ```bash
-  sbatch <script_name>.slurm
+  sbatch <script_name>.sh
   ```
 
 ---
@@ -154,17 +149,6 @@ python <script_name>.py
 - **HPC JupyterLab Access:** [Iowa State JupyterLab Guide](https://www.hpc.iastate.edu/guides/jupyterlab)
 - **Slurm Script Creation:** [Slurm Script Generator](https://www.hpc.iastate.edu/guides/nova/slurm-script-generator-for-nova)
 - **PyTorch Installation:** [PyTorch Installation Guide](https://pytorch.org/get-started/locally/)
-
----
-
-## Deliverables
-
-Participants should complete the following:
-
-- A Random Forest Slurm job script and execution logs.
-- A CIFAR-10 Python script and Slurm submission for training a CNN.
-
-If you encounter any challenges during the workshop, please reach out for assistance. Happy computing!
 
 ```
 
