@@ -1,5 +1,5 @@
 # powerpoint files
-*.pptx *.ppt
+.pptx .ppt
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
